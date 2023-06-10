@@ -3,6 +3,7 @@ import { getCommercials } from "../../api/gastronomies.api";
 import { Commercial } from "./commercial.interfaces";
 import '../../styles/Table.css'
 import { CommercialListItem } from "./CommercialListItem";
+import { CommercialForm } from "./CommercialForm";
 
 export const CommercialList = () => {
   const [commercials, setCommercials] = useState<Commercial[]>([]);
@@ -27,7 +28,9 @@ export const CommercialList = () => {
 
   return (
     <div>
-      
+      {showForm && (
+        <CommercialForm setShowForm={setShowForm} fetchCommercials={fetchCommercials} />
+      )}
 
       <div className="containerT">
         <h1 className="containerT-title">Anuncios Publicitarios</h1>

@@ -33,6 +33,9 @@ const Navbar = () => {
             <li className="menu-item">
               <Link to="/gastronomias" className="link" onClick={toggleMenu}>Gastronomia</Link>
             </li>
+            <li className="menu-item">
+              <Link to="/musicas" className="link" onClick={toggleMenu}>Musicas</Link>
+            </li>
          </ul>
       </nav>
     </header>

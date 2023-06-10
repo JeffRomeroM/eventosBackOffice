@@ -6,6 +6,7 @@ import { CommercialsPage } from "./pages/CommercialsPage";
 import { CssBaseline } from "@mui/material";
 import Header from "./components/header/Header";
 import { SportPage } from "./pages/SportPage";
+import { MusicsPage } from "./pages/MusicsPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="gastronomias" element={<GastronomiesPage />} />
         <Route path="comerciales" element={<CommercialsPage />} />
         <Route path="deportes" element={<SportPage />} />
+        <Route path="musicas" element={<MusicsPage />} />
       </Routes>
     </>
     

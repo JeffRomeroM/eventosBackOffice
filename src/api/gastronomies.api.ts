@@ -141,3 +141,40 @@ export const postSport = async (data: any) => {
 
     return sports;
 }
+//musics
+export const getMusics = async () => {
+
+    const baseUrl = import.meta.env.VITE_API_URL;
+
+    const response = await fetch(`${baseUrl}/musics`);
+    const musics = await response.json();
+
+    return musics;
+}
+
+
+export const getMusic = async (id: string) => {
+
+    const baseUrl = import.meta.env.VITE_API_URL;
+
+    const response = await fetch(`${baseUrl}/musics/${id}`);
+    const musics = await response.json();
+
+    return musics;
+}
+
+
+export const postMusic = async (data: any) => {
+    const baseUrl = import.meta.env.VITE_API_URL;
+
+    const response = await fetch(`${baseUrl}/musics`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+    const musics = await response.json();
+
+    return musics;
+}
